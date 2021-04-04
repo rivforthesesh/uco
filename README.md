@@ -1,2 +1,4 @@
 # uco
-unlimited cheat output
+source code for my unlimited cheat output mod at https://rivforthesesh.itch.io/uco-unlimited-cheat-output
+
+please credit me if you do anything with it

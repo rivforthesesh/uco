@@ -1,6 +1,7 @@
 import sims4.commands
 import sims4.log  # needed??
 import sims4.telemetry
+from functools import wraps
 
 __enable_native_commands = True
 try:
@@ -41,3 +42,12 @@ def cheat_output(s, context):
 
 # replace original
 sims4.commands.cheat_output = cheat_output
+
+
+# testing function
+@sims4.commands.Command('riv_uco_test', command_type=sims4.commands.CommandType.Live)
+def console_set_m(_connection=None):
+    output = sims4.commands.CheatOutput(_connection)
+    good_msg = 'but if you see this, uco is fine!'
+    bad_msg = 'if there\'s nothing below this, uco broke '
+    output(' '*(lim-len(bad_msg)-1) + bad_msg + good_msg)
